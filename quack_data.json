@@ -1,0 +1,78 @@
+{
+    "copy_mess": "▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n██░▄▄░█░██░█░▄▄▀█▀▄▀█░█▀██\n██░██░█░██░█░▀▀░█░█▀█░▄▀██\n██▄▄░▀██▄▄▄█▄██▄██▄██▄█▄██\n▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀\nCopyright 2021 Morgan Fox, All Rights Reserved\n",
+    "intro_mess": "Welcome back, Ranger {name}. You've been called into service once more for an important mission: find the demon Quack, also known as The Black Duck of the Pond with a Thousand Ducklings, and kill it.\n\nTo do this, you must recover the four Unholy Runes, which will empower you to kill Quack. You must also find powerful weapons to fight her with.\n\nBeware: should you attempt to kill Quack without the four runes and both weapons, you will face certain death!\n\nGood hunting, {name}!",
+    "win_mess": "With all the unholy runes at your disposal, your weapons are able to dispatch Quack after a challenging fight.",
+    "lose_mess": "Without the unholy runes and weapons, you fall to Quack's power and she feeds your corpse to her thousand ducklings.",
+    "quit_mess": "     _.-^^---....,,--\n _--                  --_  \n<                        >)\n|                         | \n \\._                   _./  \n    ```--. . , ; .--'''       \n          | |   |             \n       .-=||  | |=-.   \n       `-=#$%&%$#=-'   \n          | ;  :|     \n _____.,-#%&$@%#&#~,._____\nCoward! You're abandoning your mission and now the world is doomed!",
+
+    "items": 6,
+    "default_room": "Military Complex",
+    "rooms": {
+        "Military Complex": {
+            "South": "Land of the Damned",
+            "desc": "You are in a cutting-edge military base surrounded by soldiers.\nTo the south is a foreboding portal. Beyond it, there's no turning back."
+        },
+        "Land of the Damned": {
+            "East": "Underworld",
+            "West": "World of Dark Wizards",
+            "desc": "This is the land of the demon K'tharn, whose minions live in dark caves and ancient crypts.\nThere are portals to the East and West.",
+            "item": "Shotgun",
+            "itemDesc": "A Shotgun rests at your feet."
+        },
+        "World of Dark Wizards": {
+            "East": "Land of the Damned",
+            "South": "Ancient Realm",
+            "desc": "You are in a decayed land of dark magic, where undead wizards lair in twisted spires.\nThere are portals to the East and South.",
+            "item": "Rune of Ice",
+            "itemDesc": "The Rune of Ice sits upon a frozen pedestal, the chilled air thick around it."
+        },
+        "Underworld": {
+            "South": "Mines of Madness",
+            "West": "Land of the Damned",
+            "desc": "You're nearly overwhelmed by fear in these dark pits lit only by lava and inhabited by the eyeless.\nThere are portals to the South and West, and the Rune of Magma sits upon a Satanic altar.",
+            "item": "Rune of Magma",
+            "itemDesc": "The Rune of Magma has been placed on a satanic altar, engulfed in the foul stench of sulfur."
+        },
+        "Ancient Realm": {
+            "North": "World of Dark Wizards",
+            "East": "Astral Plane",
+            "South": "Cathedral of Chaos",
+            "desc": "An ancient labyrinth of forbidden knowledge with skin-bound books stacked in grotesque libraries.\nThere are portals to the North, East and South.",
+            "required": ["South", "Shotgun", "The portal is blocked by Quack's minions.", "You shoot the minions of Quack. The way South is now clear."]
+        },
+        "Workshop of the Weird": {
+            "West": "Mines of Madness",
+            "desc": "This strange laboratory is littered with tools both arcane and mechanical, all of them unsettling.\nThere is a portal to the West.",
+            "item": "Rune of Ooze",
+            "itemDesc": "The Rune of Ooze sits on a half-dissolved table covered in a viscous fluid."
+        },
+        "Mines of Madness": {
+            "North": "Underworld",
+            "East": "Workshop of the Weird",
+            "West": "Astral Plane",
+            "desc": "The cramped mines are dark, dank and dusty, the thin air threatening to nearly suffocate you.\nThere are portals to the North, East and West.",
+            "required": ["East", "Rocket Launcher", "The portal is blocked by a cave-in.", "You blow past the cave-in. The way East is now clear."]
+        },
+        "Cathedral of Chaos": {
+            "North": "Ancient Realm",
+            "desc": "This strange, almost unfathomable cathedral defies all laws, floating in a perpetually twilit sky.\nThere is a portal to the North.",
+            "item": "Rune of Smoke",
+            "itemDesc": "The Rune of Smoke floats ominously above the marble floor, obscured by ashy air."
+        },
+        "Astral Plane": {
+            "East": "Mines of Madness",
+            "South": "The Pit",
+            "West": "Ancient Realm",
+            "desc": "You arrive in a starry expanse, standing on one of many eerily floating rocks with makeshift bases.\nThere are portals to the East, South and West.",
+            "item": "Rocket Launcher",
+            "itemDesc": "A rocket launcher remains in one of the armories."
+        },
+        "The Pit": {
+            "North": "Astral Plane",
+            "desc": "The Pit of Quack smells of sulphur and the stench of death permeates throughout the hellscape.",
+            "End": true
+        }
+    },
+
+    "map": "  ###\n  #{0}#\n###+###\n#{2}+{1}+{3}#\n#+###+###\n#{4}+{8}+{6}+{5}#\n#+#+#####\n#{7}#{9}#\n#####"
+}
